@@ -13,6 +13,15 @@ code {
     monospace;
 }
 
+.container{
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+
 .notes-list{
   display: grid;
   grid-gap: 1rem;
@@ -33,8 +42,67 @@ code {
   justify-content: space-between;
 }
 
+ .note:hover {
+  background-color: rgb(5, 5, 5);
+  cursor: pointer;
+}
+
+.note-title {
+  color:red
+}
+
 .note-footer{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.delete-icon:hover{
+  color:red
+}
+
+.write-icon:hover{
+  color:red
+}
+
+.input{
+  background-color: rgb(27, 26, 26);
+  color: antiquewhite;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+input{
+  border: none;
+  resize: none;
+  background-color: rgb(49, 48, 48);
+  color: antiquewhite;
+}
+
+textarea{
+  border: none;
+  resize: none;
+  background-color: rgb(49, 48, 48);
+  color: antiquewhite;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+.save {
+  background-color: red;
+  color: antiquewhite;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+}
+
+.save:hover{
+  background-color: brown;
+  cursor: pointer;
 }
