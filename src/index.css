@@ -14,7 +14,8 @@ code {
 }
 
 .container{
-  max-width: 960px;
+  display:flex;
+  max-width: 960px;  
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -22,12 +23,28 @@ code {
 
 }
 
+.left{
+  display:flex;
+  align-items: center;
+  width:25%;
+  flex-direction: column;
+}
+
+.right{
+  display:flex;
+  align-items: center;
+  width: 75%;
+  flex-direction: column;
+  padding-left: 8rem;
+}
+
 .notes-list{
-  display: grid;
+  display: flex;
   grid-gap: 1rem;
   /*grid-template-columns: repeat(auto-fit, minmax(250px,1fr) );*/
   grid-template-columns: repeat(1, 250px);
   border-right: 1px solid antiquewhite;
+  
 }
 
 
@@ -37,9 +54,11 @@ code {
   border-radius: 10px;
   padding: 1rem;
   min-height: 170px;
+  width: 15rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 1rem;
   
 }
 
@@ -80,6 +99,9 @@ code {
   flex-direction: column;
   justify-content: space-between;
   border-right: 1px solid antiquewhite;
+  margin-top: 1rem;
+  width: 99%;
+
 }
 
 input{

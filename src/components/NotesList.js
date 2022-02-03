@@ -4,6 +4,7 @@ import MarkdownInput from './MarkdownInput';
 const NotesList = ({ notes, handleAddNote, handleDeleteNote}) => {
   return(
     <div className="notes-list">
+      <div className='left'>
        {notes.map((note)=> (
         <Note 
           id={note.id} 
@@ -12,9 +13,10 @@ const NotesList = ({ notes, handleAddNote, handleDeleteNote}) => {
           date={note.date}
           handleDeleteNote= {handleDeleteNote}/>
         ))} 
-    <MarkdownInput handleAddNote={handleAddNote}/>
-
-    </div>
+      </div>
+      </div>
+   
+    
   )
 };
 

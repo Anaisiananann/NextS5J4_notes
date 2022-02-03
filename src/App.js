@@ -56,13 +56,11 @@ const deleteNote = (id) => {
   <div className="container">
     <div className="left">
       <NotesList 
-        notes={notes} 
-        handleAddNote={addNote}
+        notes={notes}        
         handleDeleteNote={deleteNote}/>
       </div>
     <div className="right">
-      <div className="markdown"></div>
-      <div className="html"></div>
+      <MarkdownInput handleAddNote={addNote}/>    
     </div>
   </div>
   );
