@@ -9,12 +9,21 @@ const MarkdownInput =({handleAddNote}) => {
   };
 
   const handleSaveClick = () =>{
+
     handleAddNote(noteText);
   };
 
+  /* if(noteText.trim().lenght > 0) {
+    handleAddNote(noteText);
+    setNoteText('');
+    }*/
+
   return (
   <div className="input">
-    <input placeholder="Votre titre..."></input>
+    <input placeholder="Votre titre..."
+    value={noteText}
+    onChange={handleChange}
+    ></input>
     <textarea 
      rows='8' 
      cols='10'
