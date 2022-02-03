@@ -54,10 +54,16 @@ const deleteNote = (id) => {
   return (
     
   <div className="container">
-    <NotesList 
-      notes={notes} 
-      handleAddNote={addNote}
-      handleDeleteNote={deleteNote}/>
+    <div className="left">
+      <NotesList 
+        notes={notes} 
+        handleAddNote={addNote}
+        handleDeleteNote={deleteNote}/>
+      </div>
+    <div className="right">
+      <div className="markdown"></div>
+      <div className="html"></div>
+    </div>
   </div>
   );
 };
