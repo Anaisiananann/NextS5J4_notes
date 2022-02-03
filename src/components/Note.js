@@ -8,7 +8,7 @@ const Note = ({id, title, text, date}) => {
         <span>{text}</span>
         <div className="note-footer">
           <small>{date}</small>
-          <div>
+          <div className='icon'>
             <MdDeleteForever className='delete-icon' size='1.3em'/>
             <BsFillPencilFill className='write-icon' size='1em'/>
           </div>
