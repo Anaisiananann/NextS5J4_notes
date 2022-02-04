@@ -1,7 +1,8 @@
 import Note from './Note';
-import MarkdownInput from './MarkdownInput';
 
-const NotesList = ({ notes, handleAddNote, handleDeleteNote}) => {
+
+const NotesList = ({ notes, handleDeleteNote}) => {
+
   return(
     <div className="notes-list">
       <div className='left'>

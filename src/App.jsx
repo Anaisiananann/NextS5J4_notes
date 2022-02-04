@@ -2,8 +2,15 @@ import { useState } from "react";
 import { nanoid } from 'nanoid';
 import NotesList from "./components/NotesList";
 import MarkdownInput from "./components/MarkdownInput";
+import NoteDisplay from "./components/NoteDisplay";
+
+
 
 const App = () => {
+
+  const [noteText, setNoteText] = useState('');
+  const [noteTitle, setNoteTitle] = useState('');
+
   const [notes, setNotes] = useState([
   {
     id: nanoid(),
@@ -50,6 +57,16 @@ const deleteNote = (id) => {
   setNotes(newNotes);
 };
 
+const handleChange = (event) => {
+  if (event.target.id === "title") {
+    setNoteTitle(event.target.value)
+  } else { 
+    setNoteText(event.target.value)
+  };
+};
+
+
+
 
   return (
     
@@ -60,7 +77,8 @@ const deleteNote = (id) => {
         handleDeleteNote={deleteNote}/>
       </div>
     <div className="right">
-      <MarkdownInput handleAddNote={addNote}/>    
+      <NoteDisplay noteText={noteText} noteTitle={noteTitle}/>
+      <MarkdownInput handleAddNote={addNote} handleChange={handleChange} noteText={noteText} noteTitle={noteTitle}/>    
     </div>
   </div>
   );

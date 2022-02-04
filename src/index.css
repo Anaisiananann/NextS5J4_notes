@@ -109,6 +109,7 @@ input{
   resize: none;
   background-color: rgb(49, 48, 48);
   color: antiquewhite;
+  margin-bottom: 2rem;
 }
 
 textarea{
@@ -116,6 +117,7 @@ textarea{
   resize: none;
   background-color: rgb(49, 48, 48);
   color: antiquewhite;
+  margin-bottom: 2rem;
 }
 
 textarea:focus{
@@ -134,4 +136,16 @@ textarea:focus{
 .save:hover{
   background-color: brown;
   cursor: pointer;
+}
+
+
+.markdown-editor, .rendered-output {
+  height: 100%;
+  width: 100%;
+  padding: 10px; 
+} 
+.markdown-textarea, .rendered-html-output {
+  height: 60vh;
+  width: 100%;
+  overflow: auto;
 }
