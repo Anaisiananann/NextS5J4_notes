@@ -1,10 +1,25 @@
+import { nanoid } from 'nanoid';
+
 const MarkdownInput =({handleAddNote, handleChange, noteText, noteTitle}) => {
 
   const handleSaveClick = () =>{
     
     handleAddNote(noteText, noteTitle);
-  
+    
+    const note = {
+      id: nanoid(),
+      title: noteTitle,
+      text: noteText,
+      date: new Date().toLocaleDateString()
+    };
+
+    const notes = JSON.parse(localStorage.getItem("notes"))
+    
+    notes.push(note)
+    localStorage.notes = JSON.stringify(notes)
+
   };
+  
 
   /* if(noteText.trim().lenght > 0) {
     handleAddNote(noteText);
